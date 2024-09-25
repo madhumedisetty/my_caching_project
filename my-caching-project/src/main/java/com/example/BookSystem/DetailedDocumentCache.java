@@ -154,55 +154,6 @@ public class DetailedDocumentCache {
 
     // Main method to simulate document caching
     public static void main(String[] args) {
-//         Create a DetailedDocumentCache instance with a max size and disk storage path
-//         DetailedDocumentCache cache = new DetailedDocumentCache(20, "C:\\test\\my_caching_project\\my-caching-project\\src\\main\\java\\com\\example\\BookSystem\\diskStorage");
-
-//         // Create a thread pool for concurrent execution
-//         ExecutorService executor = Executors.newFixedThreadPool(2);
-
-//         System.err.println("Starting the simulation");
-//         System.err.println("----------------------------------");
-//         // Loop to simulate document saving and retrieval
-//         for (int i = 0; i < 50; i++) {
-//             final int index = i;
-//             executor.execute(() -> {
-//                 try {
-//                     String id = "Document" + (index);
-//                     // Even indices save new documents, odd indices retrieve documents
-//                     if (index % 2 == 0) {
-//                         Document newDocument = new Document(id, "Content for " + id, System.currentTimeMillis(), System.currentTimeMillis());
-//                         cache.saveDocument(newDocument); // Save new document
-//                         System.out.println("Saved document: " + id);
-//                     } else {
-//                         Document document = cache.getDocument(id); // Retrieve document
-//                         if (document != null) {
-//                             System.out.println("Retrieved document: " + id);
-//                         } else {
-//                             System.out.println("Document not found: " + id);
-//                         }
-//                     }
-//                 } catch (IOException | ClassNotFoundException e) {
-//                     e.printStackTrace(); // Handle exceptions
-//                 }
-//                 System.out.println("Thread " + index + " completed");
-//                 System.out.println("--------");
-//             });
-//         }
-
-//         // Shutdown the executor after all tasks are submitted
-//         executor.shutdown();
-//         try {
-//             // Wait until all threads are finished
-//             if (!executor.awaitTermination(1, TimeUnit.MINUTES)) {
-//                 executor.shutdownNow(); // Force shutdown if tasks take too long
-//             }
-//         } catch (InterruptedException e) {
-//             e.printStackTrace(); // Handle interruption
-//         }
-//     }
-// }
-
-
         DetailedDocumentCache cache = new DetailedDocumentCache(20, "C:\\test\\my_caching_project\\my-caching-project\\src\\main\\java\\com\\example\\BookSystem\\diskStorage");
         
         // Create an ExecutorService for saving documents
